@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Assets/Assets/Puzzle1/ejecmplo.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Assets/Puzzle1/1c.png" type="Texture" id=2]
@@ -11,6 +11,16 @@
 [ext_resource path="res://Escenas/Juego/Parte3.gd" type="Script" id=9]
 [ext_resource path="res://Assets/Assets/Puzzle1/2c.png" type="Texture" id=10]
 [ext_resource path="res://Escenas/Juego/Parte4.gd" type="Script" id=11]
+[ext_resource path="res://Escenas/Juego/Parte5.gd" type="Script" id=12]
+[ext_resource path="res://Assets/Assets/Puzzle1/2d.png" type="Texture" id=13]
+[ext_resource path="res://Escenas/Juego/Parte6.gd" type="Script" id=14]
+[ext_resource path="res://Assets/Assets/Puzzle1/2i.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Assets/Puzzle1/3c.png" type="Texture" id=16]
+[ext_resource path="res://Escenas/Juego/Parte7.gd" type="Script" id=17]
+[ext_resource path="res://Escenas/Juego/Parte8.gd" type="Script" id=18]
+[ext_resource path="res://Assets/Assets/Puzzle1/3d.png" type="Texture" id=19]
+[ext_resource path="res://Escenas/Juego/Parte9.gd" type="Script" id=20]
+[ext_resource path="res://Assets/Assets/Puzzle1/3i.png" type="Texture" id=21]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 36, 34.5 )
@@ -79,6 +89,66 @@ position = Vector2( -40, -34 )
 position = Vector2( 39, 33.5 )
 shape = SubResource( 1 )
 
+[node name="Parte5" type="Sprite" parent="."]
+position = Vector2( 219, 340 )
+texture = ExtResource( 13 )
+script = ExtResource( 12 )
+
+[node name="Area5" type="Area2D" parent="Parte5"]
+position = Vector2( -40, -34 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parte5/Area5"]
+position = Vector2( 39, 33.5 )
+shape = SubResource( 1 )
+
+[node name="Parte6" type="Sprite" parent="."]
+position = Vector2( 874, 68 )
+texture = ExtResource( 15 )
+script = ExtResource( 14 )
+
+[node name="Area6" type="Area2D" parent="Parte6"]
+position = Vector2( -40, -34 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parte6/Area6"]
+position = Vector2( 39, 33.5 )
+shape = SubResource( 1 )
+
+[node name="Parte7" type="Sprite" parent="."]
+position = Vector2( 632, 71 )
+texture = ExtResource( 16 )
+script = ExtResource( 17 )
+
+[node name="Area7" type="Area2D" parent="Parte7"]
+position = Vector2( -40, -34 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parte7/Area7"]
+position = Vector2( 39, 33.5 )
+shape = SubResource( 1 )
+
+[node name="Parte8" type="Sprite" parent="."]
+position = Vector2( 745, 67 )
+texture = ExtResource( 19 )
+script = ExtResource( 18 )
+
+[node name="Area8" type="Area2D" parent="Parte8"]
+position = Vector2( -40, -34 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parte8/Area8"]
+position = Vector2( 39, 33.5 )
+shape = SubResource( 1 )
+
+[node name="Parte9" type="Sprite" parent="."]
+position = Vector2( 315, 514 )
+texture = ExtResource( 21 )
+script = ExtResource( 20 )
+
+[node name="Area9" type="Area2D" parent="Parte9"]
+position = Vector2( -40, -34 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parte9/Area9"]
+position = Vector2( 39, 33.5 )
+shape = SubResource( 1 )
+
 [node name="Posicion1" type="Position2D" parent="."]
 position = Vector2( 706, 250 )
 
@@ -115,11 +185,66 @@ position = Vector2( 704, 326 )
 position = Vector2( 3, -3 )
 shape = SubResource( 2 )
 
+[node name="Posicion5" type="Position2D" parent="."]
+position = Vector2( 795, 326 )
+
+[node name="AreaPosicion5" type="Area2D" parent="Posicion5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Posicion5/AreaPosicion5"]
+position = Vector2( 3, -3 )
+shape = SubResource( 2 )
+
+[node name="Posicion6" type="Position2D" parent="."]
+position = Vector2( 612, 330 )
+
+[node name="AreaPosicion6" type="Area2D" parent="Posicion6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Posicion6/AreaPosicion6"]
+position = Vector2( 3, -3 )
+shape = SubResource( 2 )
+
+[node name="Posicion7" type="Position2D" parent="."]
+position = Vector2( 704, 405 )
+
+[node name="AreaPosicion7" type="Area2D" parent="Posicion7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Posicion7/AreaPosicion7"]
+position = Vector2( 3, -3 )
+shape = SubResource( 2 )
+
+[node name="Posicion8" type="Position2D" parent="."]
+position = Vector2( 796, 405 )
+
+[node name="AreaPosicion8" type="Area2D" parent="Posicion8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Posicion8/AreaPosicion8"]
+position = Vector2( 3, -3 )
+shape = SubResource( 2 )
+
+[node name="Posicion9" type="Position2D" parent="."]
+position = Vector2( 612, 409 )
+
+[node name="AreaPosicion9" type="Area2D" parent="Posicion9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Posicion9/AreaPosicion9"]
+position = Vector2( 3, -3 )
+shape = SubResource( 2 )
+
 [connection signal="input_event" from="Parte1/Area2D" to="Parte1" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Parte2/Area2" to="Parte2" method="_on_Area2_input_event"]
 [connection signal="input_event" from="Parte3/Area3" to="Parte3" method="_on_Area3_input_event"]
 [connection signal="input_event" from="Parte4/Area4" to="Parte4" method="_on_Area4_input_event"]
+[connection signal="input_event" from="Parte5/Area5" to="Parte5" method="_on_Area5_input_event"]
+[connection signal="input_event" from="Parte6/Area6" to="Parte6" method="_on_Area6_input_event"]
+[connection signal="input_event" from="Parte7/Area7" to="Parte7" method="_on_Area7_input_event"]
+[connection signal="input_event" from="Parte8/Area8" to="Parte8" method="_on_Area8_input_event"]
+[connection signal="input_event" from="Parte9/Area9" to="Parte9" method="_on_Area9_input_event"]
 [connection signal="area_entered" from="Posicion1/AreaPosicion1" to="Parte1" method="_on_AreaPosicion1_area_entered"]
 [connection signal="area_entered" from="Posicion2/AreaPosicion2" to="Parte2" method="_on_AreaPosicion2_area_entered"]
 [connection signal="area_entered" from="Posicion3/AreaPosicion3" to="Parte3" method="_on_AreaPosicion3_area_entered"]
 [connection signal="area_entered" from="Posicion4/AreaPosicion4" to="Parte4" method="_on_AreaPosicion4_area_entered"]
+[connection signal="area_entered" from="Posicion5/AreaPosicion5" to="Parte5" method="_on_AreaPosicion5_area_entered"]
+[connection signal="area_entered" from="Posicion6/AreaPosicion6" to="Parte6" method="_on_AreaPosicion6_area_entered"]
+[connection signal="area_entered" from="Posicion7/AreaPosicion7" to="Parte7" method="_on_AreaPosicion7_area_entered"]
+[connection signal="area_entered" from="Posicion8/AreaPosicion8" to="Parte8" method="_on_AreaPosicion8_area_entered"]
+[connection signal="area_entered" from="Posicion9/AreaPosicion9" to="Parte9" method="_on_AreaPosicion9_area_entered"]
