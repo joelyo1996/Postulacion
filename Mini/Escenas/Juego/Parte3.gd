@@ -16,15 +16,17 @@ func _process(delta):
 		click = false
 	pass 
 
-func _on_Area2_input_event(viewport, event, shape_idx):
+
+
+func _on_AreaPosicion3_area_entered(area):
+	if area.name == "Area3":
+		a = false
+		position= Vector2(650,250)
+		var mauseIn = false
+	pass # Replace with function body.
+
+
+func _on_Area3_input_event(viewport, event, shape_idx):
 	if Input.is_action_pressed("left_click"):
 		click = true
-
-
-
-func _on_AreaPosicion2_area_entered(area):
-	if area.name == "Area2":
-		a = false
-		position= Vector2(790,250)
-		var mauseIn = false
 
