@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Assets/Puzzle1/ejecmplo.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Assets/Puzzle1/1c.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Assets/hueco.png" type="Texture" id=3]
 [ext_resource path="res://Escenas/Juego/Juego.gd" type="Script" id=4]
 [ext_resource path="res://Escenas/Juego/Parte1.gd" type="Script" id=5]
+[ext_resource path="res://Escenas/Juego/Parte2.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Assets/Puzzle1/1d.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 36, 34.5 )
@@ -37,14 +39,37 @@ position = Vector2( -40, -34 )
 position = Vector2( 39, 33.5 )
 shape = SubResource( 1 )
 
+[node name="Parte2" type="Sprite" parent="."]
+position = Vector2( 403, 541 )
+texture = ExtResource( 7 )
+script = ExtResource( 6 )
+
+[node name="Area2" type="Area2D" parent="Parte2"]
+position = Vector2( -40, -34 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parte2/Area2"]
+position = Vector2( 39, 33.5 )
+shape = SubResource( 1 )
+
 [node name="Posicion1" type="Position2D" parent="."]
-position = Vector2( 564, 197 )
+position = Vector2( 672, 197 )
 
-[node name="1" type="Area2D" parent="Posicion1"]
+[node name="AreaPosicion1" type="Area2D" parent="Posicion1"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Posicion1/1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Posicion1/AreaPosicion1"]
+position = Vector2( 3, -3 )
+shape = SubResource( 2 )
+
+[node name="Posicion2" type="Position2D" parent="."]
+position = Vector2( 797, 197 )
+
+[node name="AreaPosicion2" type="Area2D" parent="Posicion2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Posicion2/AreaPosicion2"]
 position = Vector2( 3, -3 )
 shape = SubResource( 2 )
 
 [connection signal="input_event" from="Parte1/Area2D" to="Parte1" method="_on_Area2D_input_event"]
-[connection signal="area_entered" from="Posicion1/1" to="Parte1" method="_on_AreaPosicion1_area_entered"]
+[connection signal="input_event" from="Parte2/Area2" to="Parte2" method="_on_Area2_input_event"]
+[connection signal="area_entered" from="Posicion1/AreaPosicion1" to="Parte1" method="_on_AreaPosicion1_area_entered"]
+[connection signal="area_entered" from="Posicion2/AreaPosicion2" to="Parte2" method="_on_AreaPosicion2_area_entered"]
