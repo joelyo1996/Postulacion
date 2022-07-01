@@ -24,4 +24,5 @@ func _on_AreaPosicion7_area_entered(area):
 		a = false
 		position= Vector2(720,390)
 		var mauseIn = false
+		Global.victoria = Global.victoria + 1
 	pass # Replace with function body.
