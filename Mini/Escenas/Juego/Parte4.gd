@@ -16,7 +16,7 @@ func _process(delta):
 	pass 
 
 func _on_Area4_input_event(viewport, event, shape_idx):
-	if Input.is_action_pressed("left_click"):
+	if Input.is_action_just_pressed("left_click"):
 		click = true
 	pass # Replace with function body.
 
