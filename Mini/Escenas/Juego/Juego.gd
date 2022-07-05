@@ -10,4 +10,4 @@ func _process(delta):
 func _on_Timer_timeout():
 	t = t + 1
 	$Tiempo.text = String(t)
-	pass # Replace with function body.
+
