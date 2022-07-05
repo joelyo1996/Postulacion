@@ -1,6 +1,5 @@
 extends Sprite
 
-
 var click = false
 var mauseIn = true
 var a = true
@@ -16,16 +15,13 @@ func _process(delta):
 		click = false
 	pass 
 
-func _on_Area2_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("left_click"):
+func _on_Area6_input_event(viewport, event, shape_idx):
+	if Input.is_action_pressed("left_click"):
 		click = true
 
-
-
-func _on_AreaPosicion2_area_entered(area):
-	if area.name == "Area2":
+func _on_AreaPosicion6_area_entered(area):
+	if area.name == "Area6":
 		a = false
-		position= Vector2(790,250)
+		position= Vector2(650,320)
 		var mauseIn = false
-		Global.victoria = Global.victoria + 1
-
+	pass # Replace with function body.
