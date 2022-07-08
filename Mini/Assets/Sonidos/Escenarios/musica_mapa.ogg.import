@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/musica_mapa.ogg-e5e4cd2a18c700e2c12d8a311e4a2772.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sonidos/Escenarios/musica_mapa.ogg"
+dest_files=[ "res://.import/musica_mapa.ogg-e5e4cd2a18c700e2c12d8a311e4a2772.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

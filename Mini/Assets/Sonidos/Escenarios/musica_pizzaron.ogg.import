@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/musica_pizzaron.ogg-b22435fe66163e1a9718fb83c9891d13.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sonidos/Escenarios/musica_pizzaron.ogg"
+dest_files=[ "res://.import/musica_pizzaron.ogg-b22435fe66163e1a9718fb83c9891d13.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
