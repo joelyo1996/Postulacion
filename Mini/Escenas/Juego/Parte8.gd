@@ -21,6 +21,9 @@ func _on_AreaPosicion8_area_entered(area):
 		position= Vector2(790,390)
 		var mauseIn = false
 		Global.victoria = Global.victoria + 1
+		$SonidoColocado.play()
+		yield(get_tree().create_timer(0.5),"timeout")
+		$SonidoColocado.stop()
 	pass # Replace with function body.
 
 

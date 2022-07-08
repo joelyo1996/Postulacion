@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Assets/Fuentes/Fuente1.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Escenas/Final/Tiempo.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Assets/Final/boton_menu.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sonidos/Escenarios/nivel_completo.ogg" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -16,18 +17,22 @@ margin_bottom = 598.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="Tiempo" type="Label" parent="."]
-margin_left = 358.0
+margin_left = 300.0
 margin_top = 26.0
-margin_right = 398.0
-margin_bottom = 42.0
+margin_right = 340.0
+margin_bottom = 44.0
 custom_fonts/font = SubResource( 1 )
 script = ExtResource( 2 )
 
 [node name="BotonMenu" type="TextureButton" parent="."]
-margin_left = 413.0
+margin_left = 300.0
 margin_top = 278.0
-margin_right = 530.0
-margin_bottom = 294.0
+margin_right = 545.0
+margin_bottom = 336.0
 texture_normal = ExtResource( 3 )
+
+[node name="MusicaVictoria" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
 
 [connection signal="pressed" from="BotonMenu" to="Tiempo" method="_on_BotonMenu_pressed"]

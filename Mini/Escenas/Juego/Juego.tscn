@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Assets/Assets/Puzzle1/ejecmplo.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Assets/Puzzle1/1c.png" type="Texture" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://Assets/Assets/Fuentes/Fuente1.ttf" type="DynamicFontData" id=22]
 [ext_resource path="res://Assets/Assets/Puzzle1/fondosc.png" type="Texture" id=23]
 [ext_resource path="res://Assets/Sonidos/Escenarios/deposito.ogg" type="AudioStream" id=24]
+[ext_resource path="res://Escenas/Sonido/SonidoColocado.tscn" type="PackedScene" id=25]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 36, 34.5 )
@@ -64,6 +65,8 @@ position = Vector2( -40, -34 )
 position = Vector2( 39, 33.5 )
 shape = SubResource( 1 )
 
+[node name="SonidoColocado" parent="Parte1" instance=ExtResource( 25 )]
+
 [node name="Parte2" type="Sprite" parent="."]
 position = Vector2( 403, 541 )
 texture = ExtResource( 7 )
@@ -75,6 +78,8 @@ position = Vector2( -40, -34 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parte2/Area2"]
 position = Vector2( 39, 33.5 )
 shape = SubResource( 1 )
+
+[node name="SonidoColocado" parent="Parte2" instance=ExtResource( 25 )]
 
 [node name="Parte3" type="Sprite" parent="."]
 position = Vector2( 386, 344 )
@@ -88,6 +93,8 @@ position = Vector2( -40, -34 )
 position = Vector2( 39, 33.5 )
 shape = SubResource( 1 )
 
+[node name="SonidoColocado" parent="Parte3" instance=ExtResource( 25 )]
+
 [node name="Parte4" type="Sprite" parent="."]
 position = Vector2( 100, 503 )
 texture = ExtResource( 10 )
@@ -99,6 +106,8 @@ position = Vector2( -40, -34 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parte4/Area4"]
 position = Vector2( 39, 33.5 )
 shape = SubResource( 1 )
+
+[node name="SonidoColocado" parent="Parte4" instance=ExtResource( 25 )]
 
 [node name="Parte5" type="Sprite" parent="."]
 position = Vector2( 219, 340 )
@@ -112,6 +121,8 @@ position = Vector2( -40, -34 )
 position = Vector2( 39, 33.5 )
 shape = SubResource( 1 )
 
+[node name="SonidoColocado" parent="Parte5" instance=ExtResource( 25 )]
+
 [node name="Parte6" type="Sprite" parent="."]
 position = Vector2( 874, 68 )
 texture = ExtResource( 15 )
@@ -123,6 +134,8 @@ position = Vector2( -40, -34 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parte6/Area6"]
 position = Vector2( 39, 33.5 )
 shape = SubResource( 1 )
+
+[node name="SonidoColocado" parent="Parte6" instance=ExtResource( 25 )]
 
 [node name="Parte7" type="Sprite" parent="."]
 position = Vector2( 632, 71 )
@@ -136,6 +149,8 @@ position = Vector2( -40, -34 )
 position = Vector2( 39, 33.5 )
 shape = SubResource( 1 )
 
+[node name="SonidoColocado" parent="Parte7" instance=ExtResource( 25 )]
+
 [node name="Parte8" type="Sprite" parent="."]
 position = Vector2( 745, 67 )
 texture = ExtResource( 19 )
@@ -148,6 +163,8 @@ position = Vector2( -40, -34 )
 position = Vector2( 39, 33.5 )
 shape = SubResource( 1 )
 
+[node name="SonidoColocado" parent="Parte8" instance=ExtResource( 25 )]
+
 [node name="Parte9" type="Sprite" parent="."]
 position = Vector2( 315, 514 )
 texture = ExtResource( 21 )
@@ -159,6 +176,8 @@ position = Vector2( -40, -34 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parte9/Area9"]
 position = Vector2( 39, 33.5 )
 shape = SubResource( 1 )
+
+[node name="SonidoColocado" parent="Parte9" instance=ExtResource( 25 )]
 
 [node name="Posicion1" type="Position2D" parent="."]
 position = Vector2( 706, 250 )
