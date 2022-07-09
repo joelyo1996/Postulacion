@@ -10,3 +10,4 @@ func _process(delta):
 	$Tiempo.text = String(Global.minutos)+" : " +String(Global.t)
 	if Global.victoria == 18:
 		get_tree().change_scene("res://Escenas/Final/Final.tscn")
+

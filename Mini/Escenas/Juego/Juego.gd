@@ -8,8 +8,5 @@ func _process(delta):
 	if Global.victoria == 9:
 		get_tree().change_scene("res://Escenas/Juego2/Juego2.tscn")
 
-
 func _on_Timer_timeout():
 	Global.t = Global.t  + 1
-	
-
