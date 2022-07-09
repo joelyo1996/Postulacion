@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Sonidos/Botones/butom_press_sound.ogg" type="AudioStream" id=1]
+
+[node name="SonidoColocado" type="AudioStreamPlayer2D"]
+position = Vector2( -61, -350 )
+stream = ExtResource( 1 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Assets/Assets/Puzzle2/1d.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Assets/Puzzle2/ejemplo mario.jpg" type="Texture" id=2]
@@ -23,6 +23,9 @@
 [ext_resource path="res://Assets/Assets/Puzzle2/3i.png" type="Texture" id=21]
 [ext_resource path="res://Assets/Assets/Fuentes/Fuente1.ttf" type="DynamicFontData" id=22]
 [ext_resource path="res://Escenas/Juego2/Tiempo.gd" type="Script" id=23]
+[ext_resource path="res://Assets/Assets/Puzzle2/fondo_con_nubes.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Sonidos/Escenarios/nivel2.ogg" type="AudioStream" id=25]
+[ext_resource path="res://Escenas/Sonido/SonidoColocado.tscn" type="PackedScene" id=26]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 36, 34.5 )
@@ -35,6 +38,11 @@ font_data = ExtResource( 22 )
 
 [node name="Juego" type="Node2D"]
 script = ExtResource( 4 )
+
+[node name="Fondo" type="Sprite" parent="."]
+position = Vector2( 478, 292 )
+scale = Vector2( 0.28, 0.26 )
+texture = ExtResource( 24 )
 
 [node name="Tabla" type="Sprite" parent="."]
 position = Vector2( 735, 358 )
@@ -58,6 +66,8 @@ position = Vector2( -40, -34 )
 position = Vector2( 39, 33.5 )
 shape = SubResource( 1 )
 
+[node name="SonidoColocado" parent="Parte1" instance=ExtResource( 26 )]
+
 [node name="Parte2" type="Sprite" parent="."]
 position = Vector2( 403, 541 )
 texture = ExtResource( 1 )
@@ -69,6 +79,8 @@ position = Vector2( -40, -34 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parte2/Area2"]
 position = Vector2( 39, 33.5 )
 shape = SubResource( 1 )
+
+[node name="SonidoColocado" parent="Parte2" instance=ExtResource( 26 )]
 
 [node name="Parte3" type="Sprite" parent="."]
 position = Vector2( 386, 344 )
@@ -82,6 +94,8 @@ position = Vector2( -40, -34 )
 position = Vector2( 39, 33.5 )
 shape = SubResource( 1 )
 
+[node name="SonidoColocado" parent="Parte3" instance=ExtResource( 26 )]
+
 [node name="Parte4" type="Sprite" parent="."]
 position = Vector2( 100, 503 )
 texture = ExtResource( 10 )
@@ -93,6 +107,8 @@ position = Vector2( -40, -34 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parte4/Area4"]
 position = Vector2( 39, 33.5 )
 shape = SubResource( 1 )
+
+[node name="SonidoColocado" parent="Parte4" instance=ExtResource( 26 )]
 
 [node name="Parte5" type="Sprite" parent="."]
 position = Vector2( 219, 340 )
@@ -106,6 +122,8 @@ position = Vector2( -40, -34 )
 position = Vector2( 39, 33.5 )
 shape = SubResource( 1 )
 
+[node name="SonidoColocado" parent="Parte5" instance=ExtResource( 26 )]
+
 [node name="Parte6" type="Sprite" parent="."]
 position = Vector2( 874, 68 )
 texture = ExtResource( 15 )
@@ -117,6 +135,8 @@ position = Vector2( -40, -34 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parte6/Area6"]
 position = Vector2( 39, 33.5 )
 shape = SubResource( 1 )
+
+[node name="SonidoColocado" parent="Parte6" instance=ExtResource( 26 )]
 
 [node name="Parte7" type="Sprite" parent="."]
 position = Vector2( 632, 71 )
@@ -130,6 +150,8 @@ position = Vector2( -40, -34 )
 position = Vector2( 39, 33.5 )
 shape = SubResource( 1 )
 
+[node name="SonidoColocado" parent="Parte7" instance=ExtResource( 26 )]
+
 [node name="Parte8" type="Sprite" parent="."]
 position = Vector2( 745, 67 )
 texture = ExtResource( 19 )
@@ -142,6 +164,8 @@ position = Vector2( -40, -34 )
 position = Vector2( 39, 33.5 )
 shape = SubResource( 1 )
 
+[node name="SonidoColocado" parent="Parte8" instance=ExtResource( 26 )]
+
 [node name="Parte9" type="Sprite" parent="."]
 position = Vector2( 315, 514 )
 texture = ExtResource( 21 )
@@ -153,6 +177,8 @@ position = Vector2( -40, -34 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parte9/Area9"]
 position = Vector2( 39, 33.5 )
 shape = SubResource( 1 )
+
+[node name="SonidoColocado" parent="Parte9" instance=ExtResource( 26 )]
 
 [node name="Posicion1" type="Position2D" parent="."]
 position = Vector2( 706, 250 )
@@ -236,6 +262,7 @@ position = Vector2( 3, -3 )
 shape = SubResource( 2 )
 
 [node name="Tiempo" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
 margin_left = 491.0
 margin_top = 6.0
 margin_right = 531.0
@@ -245,6 +272,11 @@ script = ExtResource( 23 )
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="MusicaFondo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 25 )
+volume_db = -12.381
+autoplay = true
 
 [connection signal="input_event" from="Parte1/Area2D" to="Parte1" method="_on_Area2D_input_event"]
 [connection signal="input_event" from="Parte2/Area2" to="Parte2" method="_on_Area2_input_event"]
